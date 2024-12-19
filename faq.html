@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Stash</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+   <!-- Header Section -->
+   <header class="header">
+    <div class="logo">
+        <img src="/gallery/logo2-removebg-preview.png" alt="logo" height="60px" width="120px">
+    </div>
+    <div class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/todo.html">Schedule</a>
+        <a href="/about.html">About</a>
+        <a href="/faq.html">FAQs</a>
+        <a href="/contact.html">Contact</a>
+       
+    </div>
+</header>
+
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+            <p>Your questions answered about Stash.</p>
+        </div>
+<!-- FAQs  -->
+        <div class="faq-item">
+            <div class="faq-question">What is Stash?</div>
+            <div class="faq-answer">Stash is a study planner designed to help students organize, plan, and achieve their academic goals effectively.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is Stash free to use?</div>
+            <div class="faq-answer">Yes, Stash is completely free to use for all students.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I sync Stash with my calendar?</div>
+            <div class="faq-answer">Yes, Stash allows you to sync your tasks and schedules with your Google Calendar for better organization.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Does Stash work offline?</div>
+            <div class="faq-answer">While most features require an internet connection, basic functionalities like task viewing and editing are available offline.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How can I contact support?</div>
+            <div class="faq-answer">You can contact support by visiting the Contact page and filling out the support form.</div>
+        </div>
+    </div>
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Stash. All rights reserved. | Privacy Policy | Terms of Service</p>
+</footer>
+
+<script>
+    // JavaScript to toggle FAQ answers
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const isVisible = answer.style.display === 'block';
+            answer.style.display = isVisible ? 'none' : 'block';
+        });
+    });
+</script>
+</body>
+</html>

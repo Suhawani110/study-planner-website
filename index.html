@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stash Study Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="/gallery/logo2-removebg-preview.png" alt="logo" height="60px" width="120px">
+        </div>
+        <nav class="nav">
+            <a href="/index.html">Home</a>
+            <a href="/todo.html">Schedule</a>
+            <a href="/about.html">About</a>
+            <a href="/faq.html">FAQs</a>
+            <a href="/contact.html">Contact</a>
+           
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="/gallery/Untitled_design-removebg-preview.png" alt="logo" height="200px" width="500px">
+        </div>
+    <!-- SVG for the curve in the background-->
+            <div class="custom-shape-divider-bottom-1733943486">
+                <div class="custom-shape-divider-bottom-1733943617">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+            </div>  
+    </section>
+
+    <!-- about -->
+     <div id="about">
+        <h2>Your Ultimate Study Companion</h2>
+        <p>Stash helps you plan, organize, and stay on top of your academic goals. Achieve success with personalized tools built just for students.</p>
+        <a href="/todo.html"><button>Get Started</button></a>
+
+     </div>
+
+<!-- features -->
+    <section id="features">
+        <div class="feature">
+            <h3>Organized Scheduling</h3>
+            <p>Create and manage detailed daily, weekly, and monthly plans effortlessly.</p>
+        </div>
+        <div class="feature">
+            <h3>Progress Tracking</h3>
+            <p>Track your academic progress and celebrate your milestones with visual analytics.</p>
+        </div>
+        <div class="feature">
+            <h3>Customizable Reminders</h3>
+            <p>Never miss important deadlines with intelligent and personalized reminders.</p>
+        </div>
+    </section>
+
+<!-- reviews -->
+<section class="reviews">
+    <h2>What Students Say</h2>
+    <div class="carousel">
+        <div class="carousel-item active">"I used to struggle with keeping track of deadlines, but now I feel more in control. <br> Stash helps me focus and prioritize my goals effectively!"</div>
+        <div class="carousel-item">"Stash has completely transformed the way I approach studying. <br> It's like having a personal assistant for my academics!"</div>
+        <div class="carousel-item">"Stash is the ultimate study tool! It’s helped me balance my coursework, <br> assignments, and personal life seamlessly. I can’t imagine studying without it anymore."</div>
+        <div class="carousel-item">"Stash’s minimalistic design and powerful features make it the best study planner <br> I’ve ever used. Thank you for this amazing tool!"</div>
+
+    </div>
+    <div class="carousel-controls">
+        <button class="prev">&lt;</button>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <button class="next">&gt;</button>
+    </div>
+</section>
+
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Stash. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </footer>
+
+    <!-- JAVASCRIPT FOR FEEDBACK CAROUSEL -->
+ <script>
+        const items = document.querySelectorAll('.carousel-item');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+        
+        function showItem(index) {
+            items.forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+                dots[i].classList.toggle('active', i === index);
+            });
+        }
+        
+        document.querySelector('.next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            showItem(currentIndex);
+        });
+        
+        document.querySelector('.prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            showItem(currentIndex);
+        });
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                showItem(currentIndex);
+            });
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="todostyles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+     <!-- Header Section -->
+     <header class="header">
+        <div class="logo">
+            <img src="/gallery/logo2-removebg-preview.png" alt="logo" height="60px" width="120px">
+        </div>
+        <nav class="nav">
+            <a href="/index.html">Home</a>
+            <a href="/todo.html">Schedule</a>
+            <a href="/about.html">About</a>
+            <a href="/faq.html">FAQs</a>
+            <a href="/contact.html">Contact</a>
+           
+        </nav>
+    </header>
+<!-- schedule container -->
+    <div class="container">
+        <div class="profile">
+            <div class="profile-picture"></div>
+            <h1>Dashboard</h1>
+        </div>
+
+        <div class="to-do">
+            <h2>To Do List</h2>
+            <div>
+                <input type="text" id="todo-input" placeholder="Add a task">
+                <button onclick="addTodo()">Add Task</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </div>
+
+        <div class="schedule">
+            <h2>Task Schedule</h2>
+            <div>
+                <input type="text" id="schedule-input" placeholder="Add a task">
+                <input type="time" id="start-time">
+                <input type="time" id="end-time">
+                <button onclick="addSchedule()">Add Task</button>
+            </div>
+            <ul id="schedule-list"></ul>
+        </div>
+
+        <div class="stopwatch">
+            <h2>Stopwatch</h2>
+            <div id="stopwatch-display">00:00:00</div>
+            <div class="stopwatch-controls">
+                <button onclick="startStopwatch()">Start</button>
+                <button onclick="stopStopwatch()">Stop</button>
+                <button onclick="resetStopwatch()">Reset</button>
+            </div>
+        </div>
+
+        <div class="notes">
+            <h2>Notes</h2>
+            <div>
+                <input type="text" id="notes-input" placeholder="Add a note">
+                <button onclick="addNote()">Add Note</button>
+            </div>
+            <ul id="notes-list"></ul>
+        </div>
+
+        <div class="calendar">
+            <h2>Important Dates</h2>
+            <iframe src="https://calendar.google.com/calendar/embed?wkst=1&bgcolor=%23ffffff"></iframe>
+        </div>
+
+        <div class="motivational-quote-section">
+            <br>
+            <h3>Motivational Quote</h3>
+            <br><br>
+            <p id="quote">"Believe in yourself and all that you are."</p>
+            <br>
+            <button onclick="generateQuote()">Get New Quote</button>
+          </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
